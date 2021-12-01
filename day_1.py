@@ -7,15 +7,11 @@ def read_data():
 
 
 def part_1(data):
-    counter = sum([1 if data[i] > data[i - 1]
-                   else 0 for i in range(1, len(data))])
-    return counter
+    return sum(data[i] > data[i - 1] for i in range(1, len(data)))
 
 
 def part_2(data):
-    counter = sum([1 if data[i] > data[i - 3]
-                   else 0 for i in range(1, len(data))])
-    return counter
+    return sum(data[i] > data[i - 3] for i in range(1, len(data)))
 
 
 if __name__ == '__main__':
