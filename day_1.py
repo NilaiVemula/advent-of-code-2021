@@ -11,8 +11,7 @@ def part_1(data):
 
 
 def part_2(data):
-    return sum(data[i] > data[i - 3] for i in range(1, len(data)))
-
+    return sum(data[i] > data[i - 3] for i in range(3, len(data)))
 
 if __name__ == '__main__':
     data = read_data()
