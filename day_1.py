@@ -13,8 +13,8 @@ def part_1(data):
 
 
 def part_2(data):
-    counter = sum([1 if data[i + 1] > data[i - 2]
-                   else 0 for i in range(1, len(data)-1)])
+    counter = sum([1 if data[i] > data[i - 3]
+                   else 0 for i in range(1, len(data))])
     return counter
 
 
